@@ -7,8 +7,11 @@ describe('convert roman numeral to integer', function() {
         expect(romanNumeral(3)).to.equal("III");
     });
 
-    it("given 4 return IV", function(){
-        expect(romanNumeral(4)).to.equal("IV");
+    it("given 9 return IX", function(){
+        expect(romanNumeral(9)).to.equal("IX");
     });
 
+    it("given 994 return CMXCIV", function (){
+        expect(romanNumeral(994)).to.equal("CMXCIV");
+    });
 });

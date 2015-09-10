@@ -6,19 +6,19 @@
 //                 500: "D",
 //                 1000: "M"]
 
-var numerals = [1,5,10,50,100,500,1000];
-var roman = ["I","V","X","L","C","D","M"];
-var output = "";
+var numerals = [1,4,5,9,10,40,50,90,100,400,500,900,1000];
+var roman = ["I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"];
+
 
 var romanNumeral  = function(numberInput) {
-    for (var i=6; numberInput>0; i--) {
-        if (numberInput-numerals[i]>0) {
-            numberInput-=numerals[i];
+    var output = "";
+    for (var i=12; numberInput>0&&i>=0; i--) {//decrement
+        while (numberInput-numerals[i]>=0) {
             output += roman[i];
+            numberInput-=numerals[i];
         }
     }
-
-    return ouput;
+    return output;
 };
 
 // $(document).ready(function() {
