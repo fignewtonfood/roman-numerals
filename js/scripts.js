@@ -21,12 +21,12 @@ var romanNumeral  = function(numberInput) {
     return output;
 };
 
-// $(document).ready(function() {
-//     $("form#romannumeral").submit(function(event){
-//         var string = $("input#string").val();
-//         var answer = romanNumeral(string);
-//         $(".output").text(answer);
-//         $("#result").show();
-//         event.preventDefault();
-//     });
-// });
+$(document).ready(function() {
+    $("form#romannumeral").submit(function(event){
+        var string = $("input#string").val();
+        var answer = romanNumeral(string);
+        $(".output").text(answer);
+        $("#result").show();
+        event.preventDefault();
+    });
+});
